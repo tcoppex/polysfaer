@@ -1,0 +1,24 @@
+
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
+body {
+  margin: 0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+	color: #757575;
+	font-family: sans-serif;
+	background-color: #252525;
+}
+
+
+.about {
+  padding: 32px;
+}
+
+.font-qs {
+    font-family: 'Quicksand';
+    font-size: 24px;
+}

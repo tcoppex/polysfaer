@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="eng" ng-app="AboutApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width"/>
+    
+    <title>About M̡̛ξ</title>
+  
+    <style>
+      body {
+        margin: 32px;
+        background-color: #252525;
+        color: #757575;
+      }
+
+      .content {
+        font-family: "Courier";
+        color: #656565;
+        width: 50%;
+      }
+
+      .footer {
+        font-style: italic;
+        font-size: small;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: dotted 1px grey;
+      }
+    </style>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js">
+    </script>
+    
+    <script type="text/javascript">
+      function GetRand(array) {
+        var idx = Math.floor(Math.random() * array.length);
+        return array[idx];
+      }
+
+      var app = angular.module("AboutApp", []);
+
+      app.controller("AboutController", function ($scope) {
+        $scope.name = GetRand([
+          "Hypernomal", 
+          "Bangwadon Mills", 
+          "RetroQwant", 
+          "reVRie", 
+          "Zhang Xi", 
+          "Marici", 
+          "Xeres", 
+          "Calliope", 
+          "Apsara"]);
+
+        $scope.kind = GetRand([
+          " multimedia",
+          " crossmedia", 
+          " multidisciplinary", 
+          "n innovative"]);
+
+        $scope.occupation = GetRand([
+          "creator", 
+          "maker", 
+          "performer", 
+          "artist", 
+          "hacker"]);
+
+        $scope.city = GetRand([
+          "San Francisco", 
+          "L.A.", 
+          "New York", 
+          "Berlin", 
+          "Amsterdam", 
+          "Tokyo", 
+          "Vancouver", 
+          "São Paulo"]);
+        
+        $scope.concept = GetRand([
+          "investigating", 
+          "exploring", 
+          "questionning"]);
+        
+        $scope.domains = GetRand([
+          "objects and spaces",
+          "behaviour and aesthetics",
+          "ideas and technologies",
+          "air, light, time and space", 
+          "perception and social media",
+          "biology and mechanics",
+          "structures and rhythms",
+          "sound and litterature"]);
+
+        $scope.medias = GetRand([
+          "sensory experiences", 
+          "phenomenological experiments", 
+          "multisensorial media", 
+          "audiovisuals", 
+          "cybernetic interfaces", 
+          "virtual reality",
+          "mashed potatoes"]);
+
+        $scope.making = GetRand([
+          "custom built", 
+          "hand-made", 
+          "self crafted", 
+          "home-made", 
+          "stolen"]);
+
+        $scope.medium = GetRand([
+          "designs", 
+          "devices", 
+          "softwares", 
+          "platforms",
+          "artificial intelligence",
+          "universes"]);
+
+        $scope.work = GetRand([
+          "performances", 
+          "installations", 
+          "initiatives",
+          "projects", 
+          "practice"]);
+        
+        $scope.craft = GetRand([
+          "interdisciplinary juxtaposition", 
+          "convergence",
+          "intersection",
+          "merging"]);
+        
+        $scope.subject = GetRand(["him", "her"]);
+        
+        $scope.idea = GetRand([
+          "emergent patterns", 
+          "artificial organism", 
+          "neurological processes",
+          "generative aesthetics", 
+          "chaotic phenomena", 
+          "metaphors"]);
+        
+        $scope.communication = GetRand([
+          "narrative", 
+          "discourse", 
+          "dialogue", 
+          "commentary",
+          "perspective"]);
+
+        $scope.society = GetRand([
+          "contemporary social values", 
+          "political critique", 
+          "ethnical dissonnance", 
+          "spiritual materialism", 
+          "economical identities", 
+          "poststructuralism’s ontological questions",
+          "eugenics propaganda",
+          "gender dimorphism",
+          "historical modernism"]);
+
+        $scope.clickRefresh = () => {
+          window.location.reload();
+        }
+      });
+    </script>
+ </head>
+
+  <body ng-controller="AboutController">
+    <h2><small>(</small> A procedural joke about our fake self <small>)</small></h2>
+    <div class="content">
+      <p>
+        {{name}} is a{{kind}} {{occupation}} based in {{city}} working on {{concept}} the connection of {{domains}} through {{medias}} that run on {{making}} {{medium}}.
+      </p>
+      <p>
+        In the author’s {{work}} the {{craft}} of art and technology takes a central role, allowing {{subject}} to discover {{idea}} and develop a {{communication}} on {{society}}.
+      </p>
+    </div>
+    <div class="footer">
+      Based on <a target="_blank" href="//www.iquilezles.org/blog/?p=4079">a post</a> from Inigo Quilez - <a ng-click="clickRefresh()" href="#">refresh</a>
+    </div>
+  </body>
+</html>
