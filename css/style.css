@@ -43,6 +43,9 @@ a.thumbnail {
   border-color: #453545;
 }
 
+a.thumbnail:hover {
+}
+
 /* IDs */
 
 #wrapper {
