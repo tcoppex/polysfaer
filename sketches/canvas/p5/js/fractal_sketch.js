@@ -26,7 +26,7 @@ function Branch(pos, vel, length, lvl) {
 
   // rendering
   this.red = 128 / this.lvl;
-  this.weight = random(1) + 4 / this.lvl;
+  this.weight = random(2) + 4 / this.lvl;
 
   this.timeToBranch = function() {
     if (this.forked) {
@@ -96,7 +96,7 @@ var tree;
 //-----------------------------------------------------------------------------
 
 function setup() {
-  var canvas = createCanvas(540, 360);
+  var canvas = createCanvas(638, 1004);
   canvas.parent('p5-sketch');
 
   var b = new Branch(createVector(width / 2, height), createVector(0.0, -1.0), height / 4, 9); 
@@ -104,9 +104,9 @@ function setup() {
 }
 
 function draw() {
-  background(100);
+  background(color('#252525'));
 
-  var dt = 15.0; //getDeltaTime();
+  var dt = 55.0; //getDeltaTime();
 
   tree.update(dt);
   tree.render();
